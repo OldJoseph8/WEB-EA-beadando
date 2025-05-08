@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartJS Menü</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tabla.html">Táblázat Menü</a></li>
+            <li><a href="html5.html">HTML5 Példák</a></li>
+            <li><a href="chartjs.html" class="active">ChartJS</a></li>
+            <li><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+            <li><a href="react.html">React</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>ChartJS Példa</h2>
+        
+        <!-- Táblázat, amely adatokat tartalmaz -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Év</th>
+                    <th>Érték</th>
+                    <th>Mutató</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2021</td>
+                    <td>10</td>
+                    <td>Alapérték</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>15</td>
+                    <td>Jó eredmény</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>20</td>
+                    <td>Kitűnő teljesítmény</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>25</td>
+                    <td>Legjobb eredmény</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Az ábra helye -->
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <footer>
+        <p>Elkészítette: [Neved], Neptun kód: [Neptun kód]</p>
+    </footer>
+
+    <script>
+        // Diagram inicializálása
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',  // A diagram típusa
+            data: {
+                labels: ['2021', '2022', '2023', '2024'],  // Az X tengely értékei (évek)
+                datasets: [{
+                    label: 'Értékek',
+                    data: [10, 15, 20, 25],  // Az Y tengely adatainak értékei
+                    borderColor: '#007bff',  // Vonal színe
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',  // Vonal alatti terület színe
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Évek'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Érték'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

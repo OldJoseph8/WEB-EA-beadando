@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Táblázat Menü</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/tabla.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Táblázat CRUD Menü</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tabla.html" class="active">Táblázat Menü</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Új rekord hozzáadása</h2>
+<form id="createForm">
+    <label for="name">Név:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Életkor:</label>
+    <input type="number" id="age" required>
+
+    <button type="submit">Hozzáadás</button>
+</form>
+
+        <h2>Táblázat</h2>
+        <!-- Itt lesz a táblázat -->
+        <table id="crudTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Név</th>
+                    <th>Életkor</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- A táblázat sora itt kerül dinamikusan hozzáadásra -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Elkészítette: [Neved], Neptun kód: [Neptun kód]</p>
+    </footer>
+</body>
+</html>

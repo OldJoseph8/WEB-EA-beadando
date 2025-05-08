@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Programozás - 1. Előadás Házi Feladat</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Táblázat Menü</title>
+    <link rel="stylesheet" href="/css/style.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -14,8 +14,8 @@
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Főoldal</a></li>
-            <li><a href="tabla.html">Táblázat Menü</a></li>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tabla.html" class="active">Táblázat Menü</a></li>
             <li><a href="html5.html">HTML5 Példák</a></li>
             <li><a href="chartjs.html">ChartJS</a></li>
             <li><a href="ajax.html">AJAX</a></li>
@@ -25,7 +25,31 @@
     </nav>
 
     <div class="content">
-        <!-- Itt kerül majd a tartalom -->
+        <h2>Táblázat Példa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Neptun kód</th>
+                    <th>Elkészítő neve</th>
+                    <th>Értékelés</th>
+                    <th>Megjegyzés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A12B34</td>
+                    <td>József Pál</td>
+                    <td>5</td>
+                    <td>Jó munka!</td>
+                </tr>
+                <tr>
+                    <td>B23C45</td>
+                    <td>Anna Gábor</td>
+                    <td>4</td>
+                    <td>Van mit javítani.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <footer>

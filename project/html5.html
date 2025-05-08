@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Példák</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tabla.html">Táblázat Menü</a></li>
+            <li><a href="html5.html" class="active">HTML5 Példák</a></li>
+            <li><a href="chartjs.html">ChartJS</a></li>
+            <li><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+            <li><a href="react.html">React</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>HTML5 API példák</h2>
+        <p>Web Storage példa:</p>
+        <button onclick="storeData()">Adat mentése</button>
+        <button onclick="getData()">Adat betöltése</button>
+        <p id="storageResult"></p>
+    </div>
+
+    <footer>
+        <p>Elkészítette: [Neved], Neptun kód: [Neptun kód]</p>
+    </footer>
+    
+    <script>
+        function storeData() {
+            localStorage.setItem("name", "József");
+            document.getElementById("storageResult").innerHTML = "Adat elmentve!";
+        }
+        
+        function getData() {
+            const name = localStorage.getItem("name");
+            document.getElementById("storageResult").innerHTML = name ? "Mentett név: " + name : "Nincs mentett név!";
+        }
+    </script>
+</body>
+</html>

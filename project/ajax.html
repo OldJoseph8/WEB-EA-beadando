@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Menü</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ajax.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>AJAX Menü</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="ajax.html" class="active">AJAX</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Adatok</h2>
+        <div id="data-container"></div>
+
+        <h3>Új adat hozzáadása</h3>
+        <form id="createForm">
+            <input type="text" id="createName" placeholder="Név" required maxlength="30">
+            <input type="number" id="createAge" placeholder="Életkor" required min="0" max="120">
+            <button type="submit">Hozzáadás</button>
+        </form>
+
+        <h3>Adat módosítása</h3>
+        <form id="updateForm">
+            <input type="number" id="updateId" placeholder="ID" required>
+            <button type="button" id="getDataForId">Adat betöltése</button><br>
+            <input type="text" id="updateName" placeholder="Név" required maxlength="30">
+            <input type="number" id="updateAge" placeholder="Életkor" required min="0" max="120">
+            <button type="submit">Módosítás</button>
+        </form>
+
+        <h3>Adat törlése</h3>
+        <input type="number" id="deleteId" placeholder="ID" required>
+        <button id="deleteButton">Törlés</button>
+    </div>
+
+    <footer>
+        <p>Elkészítette: [Neved], Neptun kód: [Neptun kód]</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Menü</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/ajax.js" defer></script>
+</head>
+<body>
+  
